@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "ink": "^2.3.0",
+    "ink-select-input": "^3.1.2",
     "meow": "^5.0.0",
     "open": "^6.4.0",
     "react": "^16.9.0"
