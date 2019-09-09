@@ -5,7 +5,8 @@
   "module": "dist/epilande.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "cli.js"
   ],
   "bin": {
     "epilande": "./cli.js"
