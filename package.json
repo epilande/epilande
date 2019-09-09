@@ -7,6 +7,9 @@
   "files": [
     "dist"
   ],
+  "bin": {
+    "epilande": "./cli.js"
+  },
   "scripts": {
     "start": "tsdx watch --target node",
     "build": "tsdx build --target node",
