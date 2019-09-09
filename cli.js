@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 const meow = require("meow");
+const open = require("open");
+const { renderApp, renderErr, data } = require("./dist/index");
 
 const cli = meow(
   `
@@ -34,6 +36,28 @@ const cli = meow(
   },
 );
 
-console.log("cli", cli);
+const { open: openArgs } = cli.flags;
 
-require("./dist/index");
+if (openArgs) {
+  const sites = openArgs.split(",");
+  const unavailable = [];
+
+  sites.forEach(site => {
+    if (site) {
+      const result = data.find(
+        d => d.label.toLowerCase() === site.toLowerCase(),
+      );
+      if (result) {
+        open(result.url);
+      } else {
+        unavailable.push(site);
+      }
+    }
+  });
+
+  if (unavailable.length > 0) {
+    renderErr(unavailable);
+  }
+} else {
+  renderApp();
+}
