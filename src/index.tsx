@@ -1,13 +1,19 @@
 import React from "react";
 import { render, Box, Text, Color } from "ink";
 import SelectInput from "ink-select-input";
+import TextInput from "ink-text-input";
 import open from "open";
 import data from "./data";
 
 const user = "epilande";
 
-const renderApp = () =>
-  render(
+const App = () => {
+  const [query, setQuery] = React.useState("");
+  const items = [...data, { label: "Exit", value: "" }].filter(item =>
+    item.label.toLowerCase().includes(query.toLowerCase()),
+  );
+
+  return (
     <Box flexDirection="column">
       <Text>Hello! I am Emmanuel Pilande.</Text>
       <Box marginBottom={1}>
@@ -18,18 +24,13 @@ const renderApp = () =>
       </Box>
       <Box>
         <Text>
-          Find <Color green>{user}</Color> on:
+          Find <Color green>{user}</Color> on:{" "}
+          <TextInput value={query} onChange={text => setQuery(text)} />
         </Text>
       </Box>
 
       <SelectInput
-        items={[
-          ...data,
-          {
-            label: "Exit",
-            value: "",
-          },
-        ]}
+        items={items}
         onSelect={item => {
           if (item.value) {
             open(item.value as string);
@@ -37,8 +38,11 @@ const renderApp = () =>
           process.exit();
         }}
       />
-    </Box>,
+    </Box>
   );
+};
+
+const renderApp = () => render(<App />);
 
 const renderErr = (sites: string[]) =>
   render(
