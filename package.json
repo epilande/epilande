@@ -1,7 +1,6 @@
 {
   "name": "epilande",
   "version": "0.1.0",
-  "description": "epilande cli",
   "main": "dist/index.js",
   "module": "dist/epilande.esm.js",
   "typings": "dist/index.d.ts",
@@ -27,6 +26,7 @@
   },
   "dependencies": {
     "ink": "^2.3.0",
+    "meow": "^5.0.0",
     "react": "^16.9.0"
   },
   "devDependencies": {
