@@ -7,5 +7,9 @@
 ## Usage
 
 ```bash
+# Start interactive CLI
 $ npx epilande
+
+# Open site(s) directly
+$ npx epilande --open=github,codepen
 ```
