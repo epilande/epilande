@@ -48,7 +48,7 @@ if (openArgs) {
         d => d.label.toLowerCase() === site.toLowerCase(),
       );
       if (result) {
-        open(result.url);
+        open(result.value);
       } else {
         unavailable.push(site);
       }
