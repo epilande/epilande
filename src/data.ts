@@ -15,4 +15,8 @@ export default [
     label: "LinkedIn",
     value: "https://www.linkedin.com/in/emmanuelpilande/",
   },
+  {
+    label: "Keybase",
+    value: "https://keybase.io/epilande",
+  },
 ];
