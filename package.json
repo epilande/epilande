@@ -1,6 +1,6 @@
 {
   "name": "epilande",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "epilande cli",
   "main": "dist/index.js",
   "module": "dist/epilande.esm.js",
@@ -46,5 +46,12 @@
     "typescript": "^3.6.2"
   },
   "author": "Emmanuel Pilande",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epilande/epilande.git"
+  },
+  "bugs": {
+    "url": "https://github.com/epilande/epilande/issues"
+  }
 }
