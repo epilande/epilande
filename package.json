@@ -1,6 +1,6 @@
 {
   "name": "epilande",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "epilande cli",
   "main": "dist/index.js",
   "module": "dist/epilande.esm.js",
